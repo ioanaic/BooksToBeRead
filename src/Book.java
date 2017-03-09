@@ -62,7 +62,7 @@ public class Book {
     }
 
     public void readBooksFromConsole() {
-        int n = SkeletonJava.readIntConsole("Introduceti numarul de carti pe care doriti sa le cititi");
+        int n = SkeletonJava.readIntConsole("Introduceti numarul de carti pe care doriti sa le cititi: ");
         Book[] book = new Book[n];
         for (int i = 0; i < n; i++) {
             String bookName = SkeletonJava.readStringConsole("Introduceti numele cartii: ");
