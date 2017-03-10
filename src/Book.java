@@ -10,12 +10,12 @@ public class Book {
     private String[][] bookAuthors = null;
     // private boolean hasMultipleVolumes;
     private int volumeNumber;
-    private Date startReadDate;
-    private Date endReadDate;
+    private String startReadDate;
+    private String endReadDate;
     private String bookGenre;
     private boolean isRead;
 
-    public Book(String bookName, int numarulDeAutori, String[][] bookAuthors, boolean hasMultipleVolumes, int volumeNumber, Date startReadDate, Date endReadDate, String bookGenre, boolean isRead) {
+    public Book(String bookName, int numarulDeAutori, String[][] bookAuthors, boolean hasMultipleVolumes, int volumeNumber, String startReadDate, String endReadDate, String bookGenre, boolean isRead) {
         this.bookName = bookName;
         this.bookAuthors = bookAuthors;
         // this.hasMultipleVolumes = hasMultipleVolumes;
@@ -33,7 +33,7 @@ public class Book {
         return bookAuthors;
     }
 
-    public boolean checkHasMultipleVolumes() {
+    public boolean checkHasMultipleVolumes(String bookName) {
         if (volumeNumber > 1) {
             return true;
         } else {
@@ -45,11 +45,11 @@ public class Book {
         return volumeNumber;
     }
 
-    public Date getStartReadDate() {
+    public String getStartReadDate() {
         return startReadDate;
     }
 
-    public Date getEndReadDate() {
+    public String getEndReadDate() {
         return endReadDate;
     }
 
@@ -69,12 +69,14 @@ public class Book {
             int numarulDeAutori = SkeletonJava.readIntConsole("Introduceti numarul de autori: ");
             String[] bookAuthors = new String[numarulDeAutori];
             for (int j = 0; j < numarulDeAutori; j++) {
-                bookAuthors[j] = SkeletonJava.readStringConsole("Introduceti numele autorulu: ");
+                bookAuthors[j] = SkeletonJava.readStringConsole("Introduceti numele autorului: ");
             }
             int volumeNumber = SkeletonJava.readIntConsole("Introduceti numarul de volume: ");
-
-            this.startReadDate = startReadDate;
-            this.endReadDate = endReadDate;
+            String startReadDate = SkeletonJava.readStringConsole("Introduceti data in care doriti sa incepeti sa cititi cartea cu numele "+bookName);
+            String endReadDate = SkeletonJava.readStringConsole("Introduceti data in care terminati de citit cartea cu numele"+bookName);
+            String bookGenre
+            Book b = new Book(bookName, numarulDeAutori,  bookAuthors, volumeNumber, startReadDate, endReadDate, bookGenre, boolean isRead)
+            book[i] =
         }
     }
 
